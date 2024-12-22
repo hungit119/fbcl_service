@@ -12,6 +12,7 @@ use Laravel\Lumen\Auth\Authorizable;
 class User extends Model implements AuthenticatableContract, AuthorizableContract
 {
     use Authenticatable, Authorizable, HasFactory;
+    protected $table = self::TABLE;
     const TABLE = 'users';
     const _ID = 'id';
     const _PHONE = 'phone';
